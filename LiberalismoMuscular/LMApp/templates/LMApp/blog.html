@@ -1,0 +1,25 @@
+{% extends 'LMApp/index.html' %}
+
+{% load static %}    
+
+{% block titulo %} Blog {% endblock titulo %}
+
+{% block main %}
+    <!-- About section-->
+    <section id="rutinas">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <h2>Rutinas de entrenamiento:</h2>
+                    <p class="lead">Acá vas a encontrar las mejores rutinas al día de la fecha:</p>
+                    <ul>
+                        <li>Rutinas para potencia</li>
+                        <li>Rutinas para fuerza</li>
+                        <li>Rutinas para hipertrofia</li>
+                        <li>Rutinas metabólicas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock main %}
