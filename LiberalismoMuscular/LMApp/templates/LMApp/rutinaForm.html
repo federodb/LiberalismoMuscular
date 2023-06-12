@@ -1,0 +1,18 @@
+{% extends 'LMApp/index.html' %}
+
+{% load static %}    
+
+{% block titulo %} Rutinas {% endblock titulo %}
+
+{% block main %}
+<br>
+<h3>Crea una rutina:</h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ miFormulario.as_table }}
+    </table>
+    <input type="submit" value="Enviar">
+</form><br>
+
+{% endblock main %}

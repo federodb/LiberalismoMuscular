@@ -1,0 +1,15 @@
+{% extends 'LMApp/index.html' %}
+
+{% load static %}    
+
+{% block titulo %} Buscar Rutina {% endblock titulo %}
+
+{% block main %}
+
+<form action="/LMApp/buscar/" method="GET">
+    <input type="text" name="tipo" id="tipo">
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock main %}
