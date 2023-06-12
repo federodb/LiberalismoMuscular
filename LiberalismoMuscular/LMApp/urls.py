@@ -4,9 +4,13 @@ from LMApp import views
 
 urlpatterns = [
     path('inicio/', views.inicio, name="Inicio"),
-    path('iniciosesion/', views.iniciarsesion, name="InicioSesion"),
-    path('crearcuenta/', views.crearcuenta, name="CrearCuenta"),
-    path('blog/', views.blog, name="Blog"),
-    path('quienessomos/', views.quienesomos, name="QuienesSomos"),
-    path('contacto/', views.contacto, name="Contacto")
+    path('buscarutina/', views.buscarutina, name="buscarutina"),
+    path('curso/', views.curso, name="Curso"),
+    path('rutinas/', views.rutinas, name="Rutinas"),
+    path('alimentos/', views.alimentos, name="Alimentos"),
+    path('contacto/', views.contacto, name="Contacto"),
+    path('cursoFormulario/', views.cursoForm, name="CursoForm"),
+    path('rutinasFormulario/', views.rutinasForm, name="RutinasForm"),
+    path('alimentosFormulario/', views.alimentosForm, name="AlimentosForm"),
+    path('buscar/', views.buscar),
 ]

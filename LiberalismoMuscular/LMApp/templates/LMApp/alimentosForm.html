@@ -1,0 +1,18 @@
+{% extends 'LMApp/index.html' %}
+
+{% load static %}    
+
+{% block titulo %} Alimentos {% endblock titulo %}
+
+{% block main %}
+<br>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type="submit" value="Enviar">
+
+</form>
+
+{% endblock main %}

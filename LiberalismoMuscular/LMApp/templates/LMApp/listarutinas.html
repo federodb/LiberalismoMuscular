@@ -1,0 +1,22 @@
+{% extends 'LMApp/index.html' %}
+
+{% load static %}    
+
+{% block titulo %} Buscar Rutina {% endblock titulo %}
+
+{% block main %}
+<br>
+<p>Estamos buscando una rutina de tipo: {{tipo}}</p>
+
+{% if cursos %}
+<ul>
+{% for x in ejercicios %}
+    <li>{{x.nombre}}</li>
+    <li>{{x.rutina}}</li>
+
+{% endfor %}
+</ul>
+
+{% endif %}
+
+{% endblock main %}
