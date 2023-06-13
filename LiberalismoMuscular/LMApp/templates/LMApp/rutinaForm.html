@@ -3,16 +3,24 @@
 {% load static %}    
 
 {% block titulo %} Rutinas {% endblock titulo %}
+{% block titulo2 %} Creación de rutinas {% endblock titulo2 %}
+{% block titulo3 %} Aquí podras crear tus rutinas {% endblock titulo3 %}
+{% block subtitulo %} ¡Crea las mejores rutinas! {% endblock subtitulo %}
 
 {% block main %}
 <br>
-<h3>Crea una rutina:</h3>
+<h5><strong>Agrega una rutina:</strong></h5><br>
 <form action="" method="POST">
     {% csrf_token %}
     <table>
-        {{ miFormulario.as_table }}
+        {{ formulario.as_table }}
     </table>
     <input type="submit" value="Enviar">
 </form><br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endblock main %}

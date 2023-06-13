@@ -5,9 +5,13 @@ from LMApp.form import
 {% load static %}    
 
 {% block titulo %} Curso {% endblock titulo %}
+{% block titulo2 %} Creación de cursos {% endblock titulo2 %}
+{% block titulo3 %} Aquí podras crear tus cursos {% endblock titulo3 %}
+{% block subtitulo %} ¡Los cursos más completos! {% endblock subtitulo %}
 
 {% block main %}
 <br>
+<h5><strong>Agrega un curso:</strong></h5>
 <form action="" method="POST">
     {% csrf_token %}
     <table>
@@ -16,5 +20,10 @@ from LMApp.form import
     <input type="submit" value="Enviar">
 
 </form>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endblock main %}

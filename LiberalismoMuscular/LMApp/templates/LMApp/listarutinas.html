@@ -3,20 +3,29 @@
 {% load static %}    
 
 {% block titulo %} Buscar Rutina {% endblock titulo %}
+{% block titulo2 %} Busqueda de rutinas {% endblock titulo2 %}
+{% block titulo3 %} Aquí podras buscar las rutinas {% endblock titulo3 %}
+{% block subtitulo %} ¡Las mejores rutinas disponibles! {% endblock subtitulo %}
 
 {% block main %}
 <br>
-<p>Estamos buscando una rutina de tipo: {{tipo}}</p>
+<p>Estás buscando: <strong>{{ tipo }}</strong></p>
 
-{% if cursos %}
-<ul>
-{% for x in ejercicios %}
-    <li>{{x.nombre}}</li>
-    <li>{{x.rutina}}</li>
+{% if ejercicios %}
+    <p><strong><u>Rutinas encontradas</u></strong>: {{ejercicios|length}} rutinas.</p>
 
-{% endfor %}
-</ul>
+    <ul>
+        {% for ejercicio in ejercicios %}
+            <li>
+                <strong>{{ejercicio.nombre}}:</strong><br>
+                {{ejercicio.rutina}}
+            </li>
+        {% endfor %}
+
+    </ul>
+{% else %}
+
+    <p style="color:red">No existe ese tipo de rutina en nuestra base de datos.</p>
 
 {% endif %}
-
 {% endblock main %}
