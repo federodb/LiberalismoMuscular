@@ -3,13 +3,28 @@
 {% load static %}    
 
 {% block titulo %} Buscar Rutina {% endblock titulo %}
+{% block titulo2 %} Busqueda de rutinas {% endblock titulo2 %}
+{% block titulo3 %} Aquí podras buscar las rutinas {% endblock titulo3 %}
+{% block subtitulo %} ¡Las mejores rutinas disponibles! {% endblock subtitulo %}
 
 {% block main %}
+<h5><strong>Tipos de rutina disponible para la busqueda:</strong></h5>
+<ul>
+    <li>Fullbody</li>
+    <li>Push</li>
+    <li>Pull</li>
+    <li>Legs</li>
+</ul>
+<form action="{% url 'listarutina' %}" method="GET">
 
-<form action="/LMApp/buscar/" method="GET">
-    <input type="text" name="tipo" id="tipo">
+    <input type="text" name="type">
     <input type="submit" value="Buscar">
 
 </form>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endblock main %}

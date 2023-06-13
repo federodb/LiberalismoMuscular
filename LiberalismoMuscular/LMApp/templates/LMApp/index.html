@@ -32,9 +32,9 @@
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Bienvenidos al blog del LM</h1>
-                <p class="lead">Un blog funcional con gran descripción de la disciplina</p>
-                <a class="btn btn-lg btn-light" href="#about">Empieza a leer ya!</a>
+                <h1 class="fw-bolder">{% block titulo2 %} Bienvenidos al blog del LM {% endblock titulo2 %}</h1>
+                <p class="lead">{% block titulo3 %} n blog funcional con gran descripción de la disciplina {% endblock titulo3 %}</p>
+                <a class="btn btn-lg btn-light" href="#about">{% block subtitulo %}Empieza a leer ya!{% endblock subtitulo %}</a>
             </div>
         </header>
 

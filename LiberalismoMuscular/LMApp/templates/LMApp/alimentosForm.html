@@ -3,9 +3,13 @@
 {% load static %}    
 
 {% block titulo %} Alimentos {% endblock titulo %}
+{% block titulo2 %} Agregar Alimentos {% endblock titulo2 %}
+{% block titulo3 %} Aquí podras agregar los alimentos {% endblock titulo3 %}
+{% block subtitulo %} ¡La mejor información nutricional! {% endblock subtitulo %}
 
 {% block main %}
 <br>
+<h5><strong>Agrega un alimento:</strong></h5>
 <form action="" method="POST">
     {% csrf_token %}
     <table>
@@ -15,4 +19,10 @@
 
 </form>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endblock main %}

@@ -74,17 +74,18 @@ def rutinasForm(request):
 def buscarutina(request):
     return render(request, "LMApp/buscarutina.html")
 
-def buscar(request):
-
-    if request.GET["tipo"]:
-        
-        tipo = request.GET['tipo']
-        ejercicios = Rutinas.objects.filter(nombre__icontains=tipo)
-
-        return render(request, "LMApp/listarutinas.html", {"Tipo de rutina":tipo,"Ejercicios":ejercicios})
+def listarutina(request):
     
-    else:
-        
-        respuesta = "No enviaste datos."
+    if request.GET["type"]:
 
-    return HttpResponse(respuesta)
+        #mensaje = "Tipo de Rutina: %r" %request.GET["tipo"]
+        rutina = request.GET["type"]
+        ejercicios = Rutinas.objects.filter(nombre__icontains=rutina)
+
+        return render(request, "listarutinas.html", {"tipo":rutina, "ejercicios": ejercicios})
+
+    else:
+
+        mensaje= "ERROR -- NO HAS INTRODUCIDO NINGUN DATO."
+
+    return HttpResponse(mensaje)
