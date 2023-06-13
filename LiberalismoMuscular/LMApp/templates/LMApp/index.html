@@ -21,8 +21,8 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="{% url 'Inicio' %}">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'CursoForm' %}">Curso</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'RutinasForm' %}">Rutinas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'buscarutina' %}">Buscar Rutina</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'RutinasForm' %}">Crear Rutinas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'buscarutina' %}">Buscar Rutinas</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'AlimentosForm' %}">Alimentos</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'Contacto' %}">Contacto</a></li>
                     </ul>
@@ -33,7 +33,7 @@
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder">{% block titulo2 %} Bienvenidos al blog del LM {% endblock titulo2 %}</h1>
-                <p class="lead">{% block titulo3 %} n blog funcional con gran descripción de la disciplina {% endblock titulo3 %}</p>
+                <p class="lead">{% block titulo3 %} Un blog funcional con gran descripción de la disciplina {% endblock titulo3 %}</p>
                 <a class="btn btn-lg btn-light" href="#about">{% block subtitulo %}Empieza a leer ya!{% endblock subtitulo %}</a>
             </div>
         </header>
